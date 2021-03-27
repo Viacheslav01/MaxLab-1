@@ -2,9 +2,8 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-S str;
-T t;
-void FirstSearch(ofstream& f2, int& itog, int& count, int Nomer_znakov[100], int Nomer_vtexte_x[100], int Nomer_vtexte_y[100], int& nomer_znakov, int& znaki_tochki, int& znaki_vopros, int& znaki_vosclik, int Nomer_tochki[100], int Nomer_tochki_x[100], int Nomer_tochki_y[100], int Nomer_vosclik[100], int Nomer_vosclik_x[100], int Nomer_vosclik_y[100], int Nomer_vopros[100], int Nomer_vopros_y[100], int Nomer_vopros_x[100]) {
+
+void FirstSearch(T& t, S& str, ofstream& f2, int& itog, int& count, int Nomer_znakov[100], int Nomer_vtexte_x[100], int Nomer_vtexte_y[100], int& nomer_znakov, int& znaki_tochki, int& znaki_vopros, int& znaki_vosclik, int Nomer_tochki[100], int Nomer_tochki_x[100], int Nomer_tochki_y[100], int Nomer_vosclik[100], int Nomer_vosclik_x[100], int Nomer_vosclik_y[100], int Nomer_vopros[100], int Nomer_vopros_y[100], int Nomer_vopros_x[100]) {
     for (int i = 0; i < t.Len; i++) {
         int j = 0;
         while (t.pT[i].str[j] != str.Mark) { // идем до очередного маркера в строке

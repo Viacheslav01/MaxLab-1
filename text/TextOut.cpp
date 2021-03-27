@@ -2,9 +2,8 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-S str;
-T t;
-void InText(ifstream& f1, ofstream& f2, int A[a]) {
+
+void InText(T& t, S& str, ifstream& f1, ofstream& f2, int A[a]) {
     cout << "\n";
     f2 << "\n";
     t.pT = new S[t.Len];// создали двумерный массив.

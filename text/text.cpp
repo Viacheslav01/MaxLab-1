@@ -12,6 +12,7 @@ int main()
 {
     S str;
     T t;
+
     int A[a];
     ifstream f1;
     ofstream f2;
@@ -62,7 +63,7 @@ int main()
             f2 << A[j] << "\n";// массивчик количества элементов под каждую строку.
         }
     }
-    InText(f1, f2, A);
+    InText(t, str, f1, f2, A);
     int Nomer_znakov[100];
     int Nomer_vtexte_x[100];
     int Nomer_vtexte_y[100];
@@ -83,7 +84,9 @@ int main()
     int itog = 0;  
     cout << "Input:\n\n";
     f2 << "Input:\n\n";
-    FirstSearch(f2, itog, count, Nomer_znakov, Nomer_vtexte_x, Nomer_vtexte_y, nomer_znakov, znaki_tochki, znaki_vopros, znaki_vosclik, Nomer_tochki, Nomer_tochki_x, Nomer_tochki_y, Nomer_vosclik, Nomer_vosclik_x, Nomer_vosclik_y, Nomer_vopros, Nomer_vopros_y, Nomer_vopros_x);
+
+    FirstSearch(t, str, f2, itog, count, Nomer_znakov, Nomer_vtexte_x, Nomer_vtexte_y, nomer_znakov, znaki_tochki, znaki_vopros, znaki_vosclik, Nomer_tochki, Nomer_tochki_x, Nomer_tochki_y, Nomer_vosclik, Nomer_vosclik_x, Nomer_vosclik_y, Nomer_vopros, Nomer_vopros_y, Nomer_vopros_x);
+    
     cout << "\n\nКоличество всех символов в тексте: " << itog << "\n";
     cout << "Количество всех завершающих знаков в тексте: " << count << "\n";
     cout << "Их позиция среди других завершающих знаков и позиция в строке: \n";
@@ -151,10 +154,13 @@ int main()
     int q2 = 3;
     int zxc3 = 0;
     int q3 = 3;
-    Process(A, sum1, sum2, sum3, point1, point2, point3, b1, b2, b3, c1, c2, c3, q1, q2, q3, zxc1, zxc2, zxc3, Mass_sum_vosclik, Mass_sum_vopros, Mass_sum_tochki, Mass_2_vosclik, Mass_2_tochki, Mass_2_vopros, Mass_1_tochki, Mass_1_vosclik, Mass_1_vopros, count, Nomer_znakov, Nomer_vtexte_x, Nomer_vtexte_y, nomer_znakov, znaki_tochki, znaki_vopros, znaki_vosclik, Nomer_tochki, Nomer_tochki_x, Nomer_tochki_y, Nomer_vosclik, Nomer_vosclik_x, Nomer_vosclik_y, Nomer_vopros, Nomer_vopros_y, Nomer_vopros_x);
-    OutResult(f2, q1, q2, q3, zxc1, zxc2, zxc3, Mass_1_tochki, Mass_1_vopros, Mass_1_vosclik, Nomer_tochki, Nomer_vopros, Nomer_vosclik, Mass_sum_tochki, Mass_sum_vopros, Mass_sum_vosclik, Mass_2_tochki, Mass_2_vopros, Mass_2_vosclik);
+    Process(t, str, A, sum1, sum2, sum3, point1, point2, point3, b1, b2, b3, c1, c2, c3, q1, q2, q3, zxc1, zxc2, zxc3, Mass_sum_vosclik, Mass_sum_vopros, Mass_sum_tochki, Mass_2_vosclik, Mass_2_tochki, Mass_2_vopros, Mass_1_tochki, Mass_1_vosclik, Mass_1_vopros, count, Nomer_znakov, Nomer_vtexte_x, Nomer_vtexte_y, nomer_znakov, znaki_tochki, znaki_vopros, znaki_vosclik, Nomer_tochki, Nomer_tochki_x, Nomer_tochki_y, Nomer_vosclik, Nomer_vosclik_x, Nomer_vosclik_y, Nomer_vopros, Nomer_vopros_y, Nomer_vopros_x);
+    OutResult(t, str, f2, q1, q2, q3, zxc1, zxc2, zxc3, Mass_1_tochki, Mass_1_vopros, Mass_1_vosclik, Nomer_tochki, Nomer_vopros, Nomer_vosclik, Mass_sum_tochki, Mass_sum_vopros, Mass_sum_vosclik, Mass_2_tochki, Mass_2_vopros, Mass_2_vosclik);
+
     for (int index = 0; index < t.Len; index++) {
-        delete[] t.pT[index].str;  // удаляем массив
+        //auto ptr = t.pT[index].str;
+        //delete[] ptr;
+        //delete[] t.pT[index].str;  // удаляем массив
     }
     f1.close();
     f2.close();

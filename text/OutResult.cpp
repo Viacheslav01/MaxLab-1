@@ -2,9 +2,8 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-S str;
-T t;
-void OutResult(ofstream& f2, int& q1, int& q2, int& q3, int& zxc1, int& zxc2, int& zxc3, char Mass_1_tochki[100], char Mass_1_vopros[100], char Mass_1_vosclik[100], int Nomer_tochki[100], int Nomer_vopros[100], int Nomer_vosclik[100], int Mass_sum_tochki[300], int Mass_sum_vopros[300], int Mass_sum_vosclik[300], char Mass_2_tochki[100][200], char Mass_2_vopros[100][200], char Mass_2_vosclik[100][200]) {
+
+void OutResult(T& t, S& str, ofstream& f2, int& q1, int& q2, int& q3, int& zxc1, int& zxc2, int& zxc3, char Mass_1_tochki[100], char Mass_1_vopros[100], char Mass_1_vosclik[100], int Nomer_tochki[100], int Nomer_vopros[100], int Nomer_vosclik[100], int Mass_sum_tochki[300], int Mass_sum_vopros[300], int Mass_sum_vosclik[300], char Mass_2_tochki[100][200], char Mass_2_vopros[100][200], char Mass_2_vosclik[100][200]) {
     if (q1 > 3) {
         cout << "\n";
         f2 << "\n";
